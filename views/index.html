@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello world</title>
+</head>
+<body>
+
+	<h1>Hello World!</h1>
+
+	<style type="text/css">
+		body {
+  			background-color: #a3d5d3;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		document.getElementsByTagName("h1")[0].style.fontSize = "80px";
+
+		// Alert every 10 seconds
+		setInterval(() => {
+		fetch("https://express-vercel-deployment-rust.vercel.app/")
+			.then(response => response.text())
+			.then(data => {
+			alert("Server Response:\n\n" + data);
+			console.log("Response:", data);
+			})
+			.catch(err => {
+			alert("Error: " + err);
+			console.log("Error:", err);
+			});
+		}, 20000); // every 20 sec
+
+
+	</script>
+
+</body>
+</html>
