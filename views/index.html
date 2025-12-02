@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>hello world</title>
+	<title>Webview Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="../assets/bootstrap.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="../node_modules/androidjs/lib/androidjs.js"></script>
 </head>
+
+<style>
+	.app{
+		font-size:30px;
+	}
+</style>
+
 <body>
 
-	<h1>Hello World!</h1>
+<div class="container h-100 d-flex justify-content-center">
+    <div class="jumbotron my-auto">
+      <h3 class="display-3" id='msg'>Hello, world!</h3>
+    </div>
+ </div>
 
-	<style type="text/css">
-		body {
-  			background-color: #a3d5d3;
-		}
+<script type="text/javascript" src = "../assets/script.js"></script>
+<script src="../assets/jquery-3.3.1.slim.min.js"></script>
+<script src="../assets/popper.min.js"></script>
+<script src="../assets/bootstrap.min.js"></script>
+<style type="text/css">
+  html, body {
+    height: 100%;
+  }
 
-	</style>
+  .container {
+    padding: 0px;
+  }
 
-	<script type="text/javascript">
-		document.getElementsByTagName("h1")[0].style.fontSize = "80px";
+  .display-3 {
+    font-size: 2.0rem;
+  }
 
-		// Alert every 10 seconds
-		setInterval(() => {
-		fetch("https://express-vercel-deployment-rust.vercel.app/")
-			.then(response => response.text())
-			.then(data => {
-			alert("Server Response:\n\n" + data);
-			console.log("Response:", data);
-			})
-			.catch(err => {
-			alert("Error: " + err);
-			console.log("Error:", err);
-			});
-		}, 20000); // every 20 sec
+  .jumbotron {
+    background: #fff;
+  }
 
-
-	</script>
-
+</style>
+<script type="text/javascript">
+	function toggle_popover() {
+		$('#popover').popover('toggle')
+	}
+</script>
 </body>
+
 </html>

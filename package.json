@@ -1,23 +1,22 @@
 {
-  "name": "myapp",
-  "package-name": "mypkg",
-  "app-name": "helloworld",
+  "version": "1.0.0",
+  "name": "web-view",
+  "app-name": "Web App",
+  "package-name": "webview",
   "project-type": "webview",
   "icon": "./assets/icon/icon.png",
-  "version": "1.0.0",
+  "dist-path": "./dist",
+  "permission": [
+    "android.permission.INTERNET"
+  ],
   "description": "",
   "main": "main.js",
-  "permission": ["android.permission.INTERNET"],
   "scripts": {
-    "test": "node main.js",
-    "build": "androidjs build"
+    "start:dev": "node ."
   },
-  "dist-path": "./dist",
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "androidjs": "^1.0.0",
-    "left-pad": "^1.3.0",
-    "socket.io": "^2.2.0"
+    "androidjs": "^2.0.2"
   }
 }
